@@ -1,0 +1,48 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+.about-page-container {
+  overflow: hidden;
+
+  .about-page-wrapper {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    background-color: $dark-teal;
+    @include page-shadow;
+
+    .square {
+      width: 500px;
+    }
+
+    .content-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 500px;
+      font-size: 1.2em;
+      color: $celeste;
+    }
+
+    .left-column {
+      .content-wrapper {
+        padding-right: 30px;
+      }
+    }
+
+    .right-column {
+      .content-wrapper {
+        padding-left: 30px;
+      }
+    }
+
+    .image-wrapper {
+      height: 500px;
+    }
+
+    .image-wrapper img {
+      width: 500px;
+      object-fit: cover;
+    }
+  }
+}
