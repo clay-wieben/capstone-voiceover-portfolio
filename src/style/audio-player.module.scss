@@ -1,11 +1,11 @@
 @import "./mixins.scss";
 @import "./variables.scss";
-.player-container {
+.playerContainer {
   display: flex;
   width: 700px;
   align-items: center;
 
-  .forward-backward {
+  .forwardBackward {
     background: none;
     border: 2px solid $celeste;
     border-radius: 50%;
@@ -25,12 +25,12 @@
     }
 
     &:hover {
-      color: $oxford;
-      border-color: $oxford;
+      color: $darker-green;
+      border-color: $darker-green;
     }
   }
 
-  .play-pause {
+  .playPause {
     background: none;
     border: none;
     display: flex;
@@ -41,44 +41,53 @@
     transition: 0.4s;
 
     &:hover {
-      color: $oxford;
+      color: $darker-green;
     }
   }
 
-  .current-time,
+  .currentTime,
   .duration {
     font-size: 1.5em;
   }
 
-  .current-time {
+  .currentTime {
     margin-left: 25px;
   }
 
   // chrome
-  .progress-bar input {
+  .progressBar {
+    --bar-bg: $celeste;
+    --seek-before-width: 0;
+    --seek-before-color: $oxford;
+    --knobby: $carribean-green;
+    --selectedKnobby: $darker-green;
+
     appearance: none;
     @include bar-styles;
   }
 
   // safari
-  .progress-bar::-webkit-slider-runnable-track input {
+  .progressBar::-webkit-slider-runnable-track {
     @include bar-styles;
   }
 
   // firefox
-  .progress-bar::-moz-range-track input {
+  .progressBar::-moz-range-track {
     @include bar-styles;
   }
 
-  .progress-bar::-moz-focus-outer input {
+  .progressBar::-moz-focus-outer {
     border: 0;
   }
 
   // progress bar - chrome & safari
-  .progress-bar input::before {
+  .progressBar::before {
     content: "";
-    @include bar-before;
-    width: 0;
+    height: 11px;
+    width: var(--seek-before-width);
+    background-color: var(--seek-before-color);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     position: absolute;
     top: 0;
     left: 0;
@@ -87,12 +96,12 @@
   }
 
   // progress bar - firefox
-  .progress-bar input::-moz-range-progress {
+  .progressBar::-moz-range-progress {
     @include bar-before;
   }
 
   // knob - chrome & safari
-  .progress-bar input::-webkit-slider-thumb {
+  .progressBar::-webkit-slider-thumb {
     -webkit-appearance: none;
     @include bar-knob;
 
@@ -103,7 +112,7 @@
   }
 
   // knob - firefox
-  .progress-bar input::-moz-range-thumb {
+  .progressBar::-moz-range-thumb {
     @include bar-knob;
     border: transparent;
 

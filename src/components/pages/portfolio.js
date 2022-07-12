@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import AudioPlayer from "../player/audio-player";
+import { AudioPlayer } from "../player/audio-player";
 import "../../style/portfolio.scss";
 
 export default class Portfolio extends Component {
