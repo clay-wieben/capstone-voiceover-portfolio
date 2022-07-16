@@ -48,10 +48,14 @@
   .currentTime,
   .duration {
     font-size: 1.5em;
+    width: 55px;
+    height: 32px;
+    padding: 0px 10px 0px 10px;
+    position: relative;
   }
 
   .currentTime {
-    margin-left: 25px;
+    padding-left: 20px;
   }
 
   // chrome
@@ -83,9 +87,10 @@
   // progress bar - chrome & safari
   .progressBar::before {
     content: "";
-    height: 11px;
+    overflow: hidden;
+    height: 16px;
     width: var(--seek-before-width);
-    background-color: var(--seek-before-color);
+    background-color: #00072d;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     position: absolute;

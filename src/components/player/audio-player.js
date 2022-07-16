@@ -60,6 +60,16 @@ const AudioPlayer = () => {
     setCurrentTime(progressBar.current.value);
   };
 
+  const backThirty = () => {
+    progressBar.current.value = Number(progressBar.current.value) - 30;
+    changeRange();
+  };
+
+  const forwardThirty = () => {
+    progressBar.current.value = Number(progressBar.current.value) + 30;
+    changeRange();
+  };
+
   return (
     <div className={styles.playerContainer}>
       <audio
@@ -67,14 +77,14 @@ const AudioPlayer = () => {
         src="https://docs.google.com/uc?export=download&id=14TLEHG2JwRbLjOuGNr3JV8fZ5ntWhMgB" //id can be found by copying the "share" link from Drive
         preload="metadata"
       ></audio>
-      <button className={styles.forwardBackward}>
+      <button className={styles.forwardBackward} onClick={backThirty}>
         <RiArrowGoBackLine />
         <p>30</p>
       </button>
       <button onClick={togglePlayPause} className={styles.playPause}>
         {isPlaying ? <FaPause /> : <FaPlay className={styles.play} />}
       </button>
-      <button className={styles.forwardBackward}>
+      <button className={styles.forwardBackward} onClick={forwardThirty}>
         <RiArrowGoForwardLine />
         <p>30</p>
       </button>
