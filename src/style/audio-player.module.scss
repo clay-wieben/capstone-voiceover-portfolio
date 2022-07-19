@@ -1,5 +1,5 @@
-@import "./mixins.scss";
-@import "./variables.scss";
+@import './mixins.scss';
+@import './variables.scss';
 .playerContainer {
   display: flex;
   width: 700px;
@@ -33,6 +33,7 @@
   .playPause {
     background: none;
     border: none;
+    outline: none;
     display: flex;
     align-items: center;
     font-size: 1.7em;
@@ -86,7 +87,7 @@
 
   // progress bar - chrome & safari
   .progressBar::before {
-    content: "";
+    content: '';
     overflow: hidden;
     height: 16px;
     width: var(--seek-before-width);

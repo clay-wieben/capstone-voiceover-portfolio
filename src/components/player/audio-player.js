@@ -1,11 +1,12 @@
-import React, { useState, useRef, useEffect } from "react";
-import styles from "../../style/audio-player.module.scss";
-import { RiArrowGoBackLine } from "react-icons/ri";
-import { RiArrowGoForwardLine } from "react-icons/ri";
-import { FaPlay } from "react-icons/fa";
-import { FaPause } from "react-icons/fa";
+import React, { useState, useRef, useEffect } from 'react';
+import styles from '../../style/audio-player.module.scss';
+import { RiArrowGoBackLine } from 'react-icons/ri';
+import { RiArrowGoForwardLine } from 'react-icons/ri';
+import { FaPlay } from 'react-icons/fa';
+import { FaPause } from 'react-icons/fa';
 
 const AudioPlayer = () => {
+  //state
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
@@ -15,11 +16,18 @@ const AudioPlayer = () => {
   const progressBar = useRef();
   const animationRef = useRef();
 
-  useEffect(() => {
-    const seconds = Math.floor(audioPlayer.current.duration);
+  const onLoadedMetadata = () => {
+    const seconds = Math.floor(audioPlayer.current.duration) + 1;
     setDuration(seconds);
     progressBar.current.max = seconds;
-  }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState]);
+  };
+
+  useEffect(() => {
+    if (Number(duration) > 0 && Number(currentTime) === Number(duration)) {
+      togglePlayPause();
+    }
+    // eslint-disable-next-line
+  }, [currentTime, duration]);
 
   const calculateTime = (secs) => {
     const minutes = Math.floor(secs / 60);
@@ -29,12 +37,16 @@ const AudioPlayer = () => {
     return `${returnedMinutes}:${returnedSeconds}`;
   };
 
+  const play = () => {
+    audioPlayer.current.play();
+    animationRef.current = requestAnimationFrame(whilePlaying);
+  };
+
   const togglePlayPause = () => {
     const prevValue = isPlaying;
     setIsPlaying(!prevValue);
     if (!prevValue) {
-      audioPlayer.current.play();
-      animationRef.current = requestAnimationFrame(whilePlaying);
+      play();
     } else {
       audioPlayer.current.pause();
       cancelAnimationFrame(animationRef.current);
@@ -54,7 +66,7 @@ const AudioPlayer = () => {
 
   const changePlayerCurrentTime = () => {
     progressBar.current.style.setProperty(
-      "--seek-before-width",
+      '--seek-before-width',
       `${(progressBar.current.value / duration) * 100}%`
     );
     setCurrentTime(progressBar.current.value);
@@ -74,8 +86,9 @@ const AudioPlayer = () => {
     <div className={styles.playerContainer}>
       <audio
         ref={audioPlayer}
-        src="https://docs.google.com/uc?export=download&id=14TLEHG2JwRbLjOuGNr3JV8fZ5ntWhMgB" //id can be found by copying the "share" link from Drive
-        preload="metadata"
+        src='https://docs.google.com/uc?export=download&id=14TLEHG2JwRbLjOuGNr3JV8fZ5ntWhMgB' //id can be found by copying the "share" link from Drive
+        preload='metadata'
+        onLoadedMetadata={onLoadedMetadata}
       ></audio>
       <button className={styles.forwardBackward} onClick={backThirty}>
         <RiArrowGoBackLine />
@@ -95,9 +108,9 @@ const AudioPlayer = () => {
       {/* progress bar */}
       <div>
         <input
-          type="range"
+          type='range'
           className={styles.progressBar}
-          defaultValue="0"
+          defaultValue='0'
           ref={progressBar}
           onChange={changeRange}
         />

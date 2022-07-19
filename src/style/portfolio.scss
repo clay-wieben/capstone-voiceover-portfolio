@@ -1,5 +1,6 @@
-@import "./mixins.scss";
-@import "./variables.scss";
+@import './mixins.scss';
+@import './variables.scss';
+
 .portfolio-container {
   display: grid;
   justify-content: center;
@@ -11,12 +12,6 @@
   @include page-shadow;
 
   .portfolio-item {
-    display: flex;
-    flex-direction: column;
-
-    .audio-container {
-      display: flex;
-      flex-direction: row;
-    }
+    margin-top: 100px;
   }
 }
