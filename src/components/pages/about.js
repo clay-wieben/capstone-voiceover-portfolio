@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ParagraphsList from '../../Data/paragraphs-list';
+// import ParagraphsList from '../../data/paragraphs-list.js';
 import { Band1, Theater, OldTimey, GuitLord } from '../../assets/images/index';
 import '../../style/about.scss';
 
@@ -24,7 +24,15 @@ export default function About() {
         <div className='left-column'>
           <div className='square'>
             <div className='content-wrapper'>
-              <ParagraphsList paragraphs={paragraphs} />
+              {/* <ParagraphsList paragraphs={paragraphs} /> */}
+              {paragraphs.map((paragraph) => {
+                return (
+                  <div key={paragraph.id}>
+                    <p>{paragraph.title}</p>
+                    <p>{paragraph.body}</p>
+                  </div>
+                );
+              })}
             </div>
 
             <div className='image-wrapper'>
@@ -34,14 +42,14 @@ export default function About() {
 
           <div className='square'>
             <div className='content-wrapper'>
-              Lorem ipsum odor amet, consectetuer adipiscing elit. Hendrerit
-              integer class felis hac tempus vitae est velit iaculis habitasse
-              egestas. Fermentum taciti urna nibh efficitur aptent viverra
-              cubilia praesent; pharetra at magna. Quis dui nulla tortor dolor
-              varius vehicula mi accumsan suscipit in odio aliquam nascetur
-              augue. Himenaeos mi risus imperdiet fames efficitur sociosqu
-              elementum eget lobortis lacinia arcu aptent condimentum interdum,
-              elementum duis sagittis et.
+              Lorem ipsum odor amet, consectetuer adipiscing elit. Hendrerit\r\n
+              integer class felis hac tempus vitae est velit iaculis
+              habitasse\r\n egestas. Fermentum taciti urna nibh efficitur aptent
+              viverra\r\n cubilia praesent; pharetra at magna. Quis dui nulla
+              tortor dolor\r\n varius vehicula mi accumsan suscipit in odio
+              aliquam nascetur\r\n augue. Himenaeos mi risus imperdiet fames
+              efficitur sociosqu\r\n elementum eget lobortis lacinia arcu aptent
+              condimentum interdum,\r\n elementum duis sagittis et.
             </div>
 
             <div className='image-wrapper'>
@@ -57,14 +65,14 @@ export default function About() {
             </div>
 
             <div className='content-wrapper'>
-              Lorem ipsum odor amet, consectetuer adipiscing elit. Hendrerit
-              integer class felis hac tempus vitae est velit iaculis habitasse
-              egestas. Fermentum taciti urna nibh efficitur aptent viverra
-              cubilia praesent; pharetra at magna. Quis dui nulla tortor dolor
-              varius vehicula mi accumsan suscipit in odio aliquam nascetur
-              augue. Himenaeos mi risus imperdiet fames efficitur sociosqu
-              elementum eget lobortis lacinia arcu aptent condimentum interdum,
-              elementum duis sagittis et.
+              Lorem ipsum odor amet, consectetuer adipiscing elit. Hendrerit\r\n
+              integer class felis hac tempus vitae est velit iaculis
+              habitasse\r\n egestas. Fermentum taciti urna nibh efficitur aptent
+              viverra\r\n cubilia praesent; pharetra at magna. Quis dui nulla
+              tortor dolor\r\n varius vehicula mi accumsan suscipit in odio
+              aliquam nascetur\r\n augue. Himenaeos mi risus imperdiet fames
+              efficitur sociosqu\r\n elementum eget lobortis lacinia arcu aptent
+              condimentum interdum,\r\n elementum duis sagittis et.
             </div>
           </div>
 
@@ -73,14 +81,14 @@ export default function About() {
               <img src={GuitLord} alt='GuitLord' />
             </div>
             <div className='content-wrapper'>
-              Lorem ipsum odor amet, consectetuer adipiscing elit. Hendrerit
-              integer class felis hac tempus vitae est velit iaculis habitasse
-              egestas. Fermentum taciti urna nibh efficitur aptent viverra
-              cubilia praesent; pharetra at magna. Quis dui nulla tortor dolor
-              varius vehicula mi accumsan suscipit in odio aliquam nascetur
-              augue. Himenaeos mi risus imperdiet fames efficitur sociosqu
-              elementum eget lobortis lacinia arcu aptent condimentum interdum,
-              elementum duis sagittis et.
+              Lorem ipsum odor amet, consectetuer adipiscing elit. Hendrerit\r\n
+              integer class felis hac tempus vitae est velit iaculis
+              habitasse\r\n egestas. Fermentum taciti urna nibh efficitur aptent
+              viverra\r\n cubilia praesent; pharetra at magna. Quis dui nulla
+              tortor dolor\r\n varius vehicula mi accumsan suscipit in odio
+              aliquam nascetur\r\n augue. Himenaeos mi risus imperdiet fames
+              efficitur sociosqu\r\n elementum eget lobortis lacinia arcu aptent
+              condimentum interdum,\r\n elementum duis sagittis et.
             </div>
           </div>
         </div>
