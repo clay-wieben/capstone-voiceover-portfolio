@@ -12,6 +12,17 @@
   @include page-shadow;
 
   .portfolio-item {
-    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    border: 1px solid $celeste;
+    border-radius: 5px;
+    padding: 15px;
+
+    .title-description {
+      h3 {
+        font-weight: 400;
+      }
+    }
   }
 }

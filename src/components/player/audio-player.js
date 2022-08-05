@@ -82,11 +82,16 @@ const AudioPlayer = () => {
     changeRange();
   };
 
+  let fileId = {
+    name: 'Thunder Bringer',
+    id: '1opfO9yeIEVAq2fj_wQfRety8I9MUYLmB',
+  };
+
   return (
     <div className={styles.playerContainer}>
       <audio
         ref={audioPlayer}
-        src='https://docs.google.com/uc?export=download&id=14TLEHG2JwRbLjOuGNr3JV8fZ5ntWhMgB' //id can be found by copying the "share" link from Drive
+        src={`https://docs.google.com/uc?export=download&id=${fileId.id}`} //id can be found by copying the "share" link from Drive
         preload='metadata'
         onLoadedMetadata={onLoadedMetadata}
       ></audio>
@@ -101,10 +106,8 @@ const AudioPlayer = () => {
         <RiArrowGoForwardLine />
         <p>30</p>
       </button>
-
       {/* current time */}
       <div className={styles.currentTime}>{calculateTime(currentTime)}</div>
-
       {/* progress bar */}
       <div>
         <input
@@ -115,7 +118,6 @@ const AudioPlayer = () => {
           onChange={changeRange}
         />
       </div>
-
       {/* duration */}
       <div className={styles.duration}>
         {duration && !isNaN(duration) && calculateTime(duration)}

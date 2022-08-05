@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import ParagraphsList from '../../data/paragraphs-list.js';
-import { Band1, Theater, OldTimey, GuitLord } from '../../assets/images/index';
 import '../../style/about.scss';
 
 export default function About() {
@@ -24,36 +22,31 @@ export default function About() {
         <div className='left-column'>
           <div className='square'>
             <div className='content-wrapper'>
-              {/* <ParagraphsList paragraphs={paragraphs} /> */}
-              {paragraphs.map((paragraph) => {
-                return (
-                  <div key={paragraph.id}>
-                    <p>{paragraph.title}</p>
-                    <p>{paragraph.body}</p>
-                  </div>
-                );
-              })}
+              {paragraphs
+                .filter((paragraphs) => paragraphs.id === 1)
+                .map((paragraphs) => paragraphs.body)}
             </div>
 
             <div className='image-wrapper'>
-              <img src={OldTimey} alt='OldTimey' />
+              <img
+                src='http://localhost:5000/static/images/old-timey.png'
+                alt='OldTimey'
+              />
             </div>
           </div>
 
           <div className='square'>
             <div className='content-wrapper'>
-              Lorem ipsum odor amet, consectetuer adipiscing elit. Hendrerit\r\n
-              integer class felis hac tempus vitae est velit iaculis
-              habitasse\r\n egestas. Fermentum taciti urna nibh efficitur aptent
-              viverra\r\n cubilia praesent; pharetra at magna. Quis dui nulla
-              tortor dolor\r\n varius vehicula mi accumsan suscipit in odio
-              aliquam nascetur\r\n augue. Himenaeos mi risus imperdiet fames
-              efficitur sociosqu\r\n elementum eget lobortis lacinia arcu aptent
-              condimentum interdum,\r\n elementum duis sagittis et.
+              {paragraphs
+                .filter((paragraphs) => paragraphs.id === 3)
+                .map((paragraphs) => paragraphs.body)}
             </div>
 
             <div className='image-wrapper'>
-              <img src={Band1} alt='Band1' />
+              <img
+                src='http://localhost:5000/static/images/band-1.png'
+                alt='Band1'
+              />
             </div>
           </div>
         </div>
@@ -61,34 +54,30 @@ export default function About() {
         <div className='right-column'>
           <div className='square'>
             <div className='image-wrapper'>
-              <img src={Theater} alt='theater' />
+              <img
+                src='http://localhost:5000/static/images/theater.png'
+                alt='theater'
+              />
             </div>
 
             <div className='content-wrapper'>
-              Lorem ipsum odor amet, consectetuer adipiscing elit. Hendrerit\r\n
-              integer class felis hac tempus vitae est velit iaculis
-              habitasse\r\n egestas. Fermentum taciti urna nibh efficitur aptent
-              viverra\r\n cubilia praesent; pharetra at magna. Quis dui nulla
-              tortor dolor\r\n varius vehicula mi accumsan suscipit in odio
-              aliquam nascetur\r\n augue. Himenaeos mi risus imperdiet fames
-              efficitur sociosqu\r\n elementum eget lobortis lacinia arcu aptent
-              condimentum interdum,\r\n elementum duis sagittis et.
+              {paragraphs
+                .filter((paragraphs) => paragraphs.id === 2)
+                .map((paragraphs) => paragraphs.body)}
             </div>
           </div>
 
           <div className='square'>
             <div className='image-wrapper'>
-              <img src={GuitLord} alt='GuitLord' />
+              <img
+                src='http://localhost:5000/static/images/guit-lord.png'
+                alt='GuitLord'
+              />
             </div>
             <div className='content-wrapper'>
-              Lorem ipsum odor amet, consectetuer adipiscing elit. Hendrerit\r\n
-              integer class felis hac tempus vitae est velit iaculis
-              habitasse\r\n egestas. Fermentum taciti urna nibh efficitur aptent
-              viverra\r\n cubilia praesent; pharetra at magna. Quis dui nulla
-              tortor dolor\r\n varius vehicula mi accumsan suscipit in odio
-              aliquam nascetur\r\n augue. Himenaeos mi risus imperdiet fames
-              efficitur sociosqu\r\n elementum eget lobortis lacinia arcu aptent
-              condimentum interdum,\r\n elementum duis sagittis et.
+              {paragraphs
+                .filter((paragraphs) => paragraphs.id === 4)
+                .map((paragraphs) => paragraphs.body)}
             </div>
           </div>
         </div>
