@@ -5,7 +5,7 @@ import { RiArrowGoForwardLine } from 'react-icons/ri';
 import { FaPlay } from 'react-icons/fa';
 import { FaPause } from 'react-icons/fa';
 
-const AudioPlayer = () => {
+const AudioPlayer = (props) => {
   //state
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
@@ -82,19 +82,15 @@ const AudioPlayer = () => {
     changeRange();
   };
 
-  let fileId = {
-    name: 'Thunder Bringer',
-    id: '1opfO9yeIEVAq2fj_wQfRety8I9MUYLmB',
-  };
-
   return (
     <div className={styles.playerContainer}>
       <audio
         ref={audioPlayer}
-        src={`https://docs.google.com/uc?export=download&id=${fileId.id}`} //id can be found by copying the "share" link from Drive
+        src={`https://docs.google.com/uc?export=download&id=${props.id}`} //id can be found by copying the "share" link from Drive
         preload='metadata'
         onLoadedMetadata={onLoadedMetadata}
       ></audio>
+      {console.log(props.id)}
       <button className={styles.forwardBackward} onClick={backThirty}>
         <RiArrowGoBackLine />
         <p>30</p>
