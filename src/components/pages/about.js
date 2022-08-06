@@ -5,7 +5,7 @@ export default function About() {
   const [paragraphs, setParagraphs] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/get', {
+    fetch('https://cdw-voiceover-capstone.herokuapp.com/get', {
       methods: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -31,7 +31,7 @@ export default function About() {
 
             <div className='image-wrapper'>
               <img
-                src='http://localhost:5000/static/images/old-timey.png'
+                src='https://cdw-voiceover-capstone.herokuapp.com/static/images/old-timey.png'
                 alt='OldTimey'
               />
             </div>
@@ -48,7 +48,7 @@ export default function About() {
 
             <div className='image-wrapper'>
               <img
-                src='http://localhost:5000/static/images/band-1.png'
+                src='https://cdw-voiceover-capstone.herokuapp.com/static/images/band-1.png'
                 alt='Band1'
               />
             </div>
@@ -59,7 +59,7 @@ export default function About() {
           <div className='square'>
             <div className='image-wrapper'>
               <img
-                src='http://localhost:5000/static/images/theater.png'
+                src='https://cdw-voiceover-capstone.herokuapp.com/static/images/theater.png'
                 alt='theater'
               />
             </div>
@@ -76,7 +76,7 @@ export default function About() {
           <div className='square'>
             <div className='image-wrapper'>
               <img
-                src='http://localhost:5000/static/images/guit-lord.png'
+                src='https://cdw-voiceover-capstone.herokuapp.com/static/images/guit-lord.png'
                 alt='GuitLord'
               />
             </div>
