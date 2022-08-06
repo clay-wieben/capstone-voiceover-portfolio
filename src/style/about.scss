@@ -1,5 +1,7 @@
-@import "./mixins.scss";
-@import "./variables.scss";
+@import './mixins.scss';
+@import './variables.scss';
+@import './media-queries.scss';
+
 .about-page-container {
   overflow: hidden;
 
@@ -22,19 +24,24 @@
       height: 500px;
       font-size: 1.2em;
       color: $celeste;
-    }
 
-    .left-column {
-      .content-wrapper {
-        padding-right: 30px;
+      p {
+        padding-right: 20px;
+        padding-left: 20px;
       }
     }
 
-    .right-column {
-      .content-wrapper {
-        padding-left: 30px;
-      }
-    }
+    // .left-column {
+    //   .content-wrapper {
+    //     padding-right: 30px;
+    //   }
+    // }
+
+    // .right-column {
+    //   .content-wrapper {
+    //     padding-left: 30px;
+    //   }
+    // }
 
     .image-wrapper {
       height: 500px;

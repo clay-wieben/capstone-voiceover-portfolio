@@ -1,5 +1,7 @@
-@import "./mixins.scss";
-@import "./variables.scss";
+@import './mixins.scss';
+@import './variables.scss';
+@import 'media-queries.scss';
+
 .contact-page-wrapper {
   display: grid;
   grid-template-columns: 1fr;

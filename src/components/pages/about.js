@@ -22,9 +22,11 @@ export default function About() {
         <div className='left-column'>
           <div className='square'>
             <div className='content-wrapper'>
-              {paragraphs
-                .filter((paragraphs) => paragraphs.id === 1)
-                .map((paragraphs) => paragraphs.body)}
+              <p>
+                {paragraphs
+                  .filter((paragraphs) => paragraphs.id === 1)
+                  .map((paragraphs) => paragraphs.body)}
+              </p>
             </div>
 
             <div className='image-wrapper'>
@@ -37,9 +39,11 @@ export default function About() {
 
           <div className='square'>
             <div className='content-wrapper'>
-              {paragraphs
-                .filter((paragraphs) => paragraphs.id === 3)
-                .map((paragraphs) => paragraphs.body)}
+              <p>
+                {paragraphs
+                  .filter((paragraphs) => paragraphs.id === 3)
+                  .map((paragraphs) => paragraphs.body)}
+              </p>
             </div>
 
             <div className='image-wrapper'>
@@ -61,9 +65,11 @@ export default function About() {
             </div>
 
             <div className='content-wrapper'>
-              {paragraphs
-                .filter((paragraphs) => paragraphs.id === 2)
-                .map((paragraphs) => paragraphs.body)}
+              <p>
+                {paragraphs
+                  .filter((paragraphs) => paragraphs.id === 2)
+                  .map((paragraphs) => paragraphs.body)}
+              </p>
             </div>
           </div>
 
@@ -75,9 +81,11 @@ export default function About() {
               />
             </div>
             <div className='content-wrapper'>
-              {paragraphs
-                .filter((paragraphs) => paragraphs.id === 4)
-                .map((paragraphs) => paragraphs.body)}
+              <p>
+                {paragraphs
+                  .filter((paragraphs) => paragraphs.id === 4)
+                  .map((paragraphs) => paragraphs.body)}
+              </p>
             </div>
           </div>
         </div>

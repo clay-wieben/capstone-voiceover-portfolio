@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import '../../style/navigation.scss';
+import '../../style/media-queries.scss';
 import Logo from '../../../src/assets/images/branding/CW-Logo.svg';
 
 const NavBar = () => {

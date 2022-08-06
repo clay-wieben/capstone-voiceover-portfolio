@@ -1,5 +1,7 @@
 @import './mixins.scss';
 @import './variables.scss';
+@import './media-queries.scss';
+
 .playerContainer {
   display: flex;
   width: 700px;
