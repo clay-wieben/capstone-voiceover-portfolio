@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3b7555d0.css",
+    "main.js": "/static/js/main.e3e779fc.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/stock-phone.png": "/static/media/stock-phone.75b7305891355e12fada.png",
+    "static/media/headshot.png": "/static/media/headshot.1d5063aeab68d06c720d.png",
+    "static/media/Mic_stock.png": "/static/media/Mic_stock.0949d4918f1e530b698c.png",
+    "static/media/CW-Logo.svg": "/static/media/CW-Logo.7d6fc1b2c5fc69f65eee31d1e4762798.svg",
+    "index.html": "/index.html",
+    "main.3b7555d0.css.map": "/static/css/main.3b7555d0.css.map",
+    "main.e3e779fc.js.map": "/static/js/main.e3e779fc.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3b7555d0.css",
+    "static/js/main.e3e779fc.js"
+  ]
+}
