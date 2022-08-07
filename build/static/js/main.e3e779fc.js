@@ -10812,7 +10812,7 @@
           r = e[1];
         return (
           (0, n.useEffect)(function () {
-            fetch('https://cdw-voiceover-capstone.herokuapp.com', {
+            fetch('https://cdw-voiceover-backend.herokuapp.com', {
               methods: 'GET',
               headers: { 'Content-Type': 'application/json' },
             })
@@ -10852,7 +10852,7 @@
                         (0, ie.jsx)('div', {
                           className: 'image-wrapper',
                           children: (0, ie.jsx)('img', {
-                            src: 'https://cdw-voiceover-capstone.herokuapp.com/static/images/old-timey.png',
+                            src: 'https://cdw-voiceover-backend.herokuapp.com/static/images/old-timey.png',
                             alt: 'OldTimey',
                           }),
                         }),
@@ -10876,7 +10876,7 @@
                         (0, ie.jsx)('div', {
                           className: 'image-wrapper',
                           children: (0, ie.jsx)('img', {
-                            src: 'https://cdw-voiceover-capstone.herokuapp.com/static/images/band-1.png',
+                            src: 'https://cdw-voiceover-backend.herokuapp.com/static/images/band-1.png',
                             alt: 'Band1',
                           }),
                         }),
@@ -10893,7 +10893,7 @@
                         (0, ie.jsx)('div', {
                           className: 'image-wrapper',
                           children: (0, ie.jsx)('img', {
-                            src: 'https://cdw-voiceover-capstone.herokuapp.com/static/images/theater.png',
+                            src: 'https://cdw-voiceover-backend.herokuapp.com/static/images/theater.png',
                             alt: 'theater',
                           }),
                         }),
@@ -10917,7 +10917,7 @@
                         (0, ie.jsx)('div', {
                           className: 'image-wrapper',
                           children: (0, ie.jsx)('img', {
-                            src: 'https://cdw-voiceover-capstone.herokuapp.com/static/images/guit-lord.png',
+                            src: 'https://cdw-voiceover-backend.herokuapp.com/static/images/guit-lord.png',
                             alt: 'GuitLord',
                           }),
                         }),
