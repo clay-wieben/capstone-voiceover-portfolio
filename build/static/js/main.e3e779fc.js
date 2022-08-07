@@ -10812,7 +10812,7 @@
           r = e[1];
         return (
           (0, n.useEffect)(function () {
-            fetch('https://cdw-voiceover-capstone.herokuapp.com/get', {
+            fetch('https://cdw-voiceover-capstone.herokuapp.com', {
               methods: 'GET',
               headers: { 'Content-Type': 'application/json' },
             })

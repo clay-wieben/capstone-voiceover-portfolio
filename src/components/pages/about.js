@@ -5,7 +5,7 @@ export default function About() {
   const [paragraphs, setParagraphs] = useState([]);
 
   useEffect(() => {
-    fetch('https://cdw-voiceover-capstone.herokuapp.com/get', {
+    fetch('https://cdw-voiceover-capstone.herokuapp.com', {
       methods: 'GET',
       headers: {
         'Content-Type': 'application/json',
